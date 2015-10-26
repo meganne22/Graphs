@@ -8,24 +8,24 @@
 
 using namespace std;
 
-void parseFile(istream& stream, vector<pair<int, int> > &connections, int &vertices)
+void parseFile(istream& strumien, vector<pair<int, int> > &polaczenia, int &vertices)
 {
     set<int> s;
-    int connectionsCount = 0;
+    int iloscPolaczen = 0;
     int a, b = 0;
-    stream >> vertices >> connectionsCount;
+    strumien >> vertices >> iloscPolaczen;
 
-    for(int i = 0; i < connectionsCount; i++)
+    for(int i = 0; i < iloscPolaczen; i++)
     {
-        stream >> a >> b;
+        strumien >> a >> b;
         s.insert(a); s.insert(b);
-        connections.push_back(pair<int, int>(a, b));
+        polaczenia.push_back(pair<int, int>(a, b));
     }
 
-    if(connections.size() != connectionsCount)
-        throw std::logic_error("Connections count does not match");
+    if(polaczenia.size() != iloscPolaczen)
+        throw logic_error("Connections count does not match");
     if(s.size() != vertices)
-        throw std::logic_error("Too little vertices");
+        throw logic_error("Too little vertices");
 }
 
 int main()
