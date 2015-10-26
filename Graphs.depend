@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1445611058 source:e:\git\graphs\abstractgraph.cpp
+	"abstractgraph.h"
+
+1445820365 e:\git\graphs\abstractgraph.h
+
+1445820422 source:e:\git\graphs\listgraph.cpp
+	"listgraph.h"
+	<stdlib.h>
+	<algorithm>
+
+1445820389 e:\git\graphs\listgraph.h
+	<vector>
+
